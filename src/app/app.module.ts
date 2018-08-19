@@ -6,10 +6,16 @@ import { HttpModule } from '@angular/http';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 import { AppComponent } from './app.component';
+import { UpperMenuComponent } from './shared/upper-menu/upper-menu.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { MainContentComponent } from './shared/main-content/main-content.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UpperMenuComponent,
+    FooterComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,

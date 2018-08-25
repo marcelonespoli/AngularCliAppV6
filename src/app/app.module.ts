@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -20,6 +20,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { EventsComponent } from './events/events.component';
 
+// services
+import { SeoService } from './services/seo.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +41,10 @@ import { EventsComponent } from './events/events.component';
     CarouselModule.forRoot(),
     RouterModule.forRoot(rootRouterConfig, { useHash: false })
   ],
-  providers: [],
+  providers: [
+    Title,
+    SeoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
